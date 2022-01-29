@@ -5,7 +5,7 @@ salary-management-frontend consists of the front-end application for the Salary 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 
-## Step 1) Build
+## Step 1) Install missing dependencies
 
 Run `npm install` to install node modules.
 
