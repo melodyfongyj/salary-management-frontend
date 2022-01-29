@@ -1,0 +1,59 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="header"></div>
+<div class="sal-container">
+    <p class="title">Salary List</p>
+    <hr/>
+    <div class="buttons">
+        <div class="filter-date">
+            <select class="select-month" [(ngModel)]="selectedMonth">
+                <option value="All">All</option>
+                <option *ngFor="let i of allmonths" [ngValue]="i">{{ i.name }}</option>
+            </select>
+            <select class="select-year" [(ngModel)]="selectedYear">
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+            <button class="submit-date" (click)="getSalary()">Filter Records</button>
+            <label class="norecord"> {{ norecord }} </label>
+        </div>
+        <div class="updateSalary">
+            <button type="button" (click)="goToUpdateSalary()">Modify Salary</button>
+        </div>
+    </div>
+    
+    
+    
+    <table class="salList">
+        <th hidden>SalId</th>
+        <th >Month</th>
+        <th >Year</th>
+        <th class="thtd-id">ID</th>
+        <th>Name</th>
+        <th>Basic Salary</th>
+        <th>Bonus</th>
+        <th>Deduction</th>
+        <th>Salary Amount</th>
+        <th>Remarks</th>
+        <th>Invoice Date</th>
+        
+        <tbody *ngFor="let i of selectedData">
+            <tr>
+                <td hidden><input class="tableinput" name="{{i.salaryId}}" type='text' [value] = "i.salaryId" readonly/></td>
+                <td ><input id="month" class="tableinput" name="{{i.month}}" type='text' [value] = "i.month" readonly/></td>
+                <td ><input id="year" class="tableinput" name="{{i.year}}" type='text' [value] = "i.year" readonly/></td>
+                <td class="thtd-id"><input class="tableinput" name="{{i.employeeId}}" type='text' [(ngModel)] = "i.employeeId" readonly/></td>
+                <td><input id="name" class="tableinput" name="{{i.name}}" type='text' [(ngModel)] = "i.name" readonly/></td>
+                <td><input class="tableinput" name="{{i.basicSalary}}" type='text' [(ngModel)] = "i.basicSalary" readonly/></td>
+                <td><input class="tableinput" name="{{i.bonus}}" type='text' [(ngModel)] = "i.bonus" readonly/></td>
+                <td><input class="tableinput" name="{{i.deduction}}" type='text' [(ngModel)] = "i.deduction" readonly/></td>
+                <td><input class="tableinput" name="{{i.salaryAmt}}" type='text' [(ngModel)] = "i.salaryAmt" readonly/></td>
+                <td><input class="tableinput" name="{{i.remarks}}" type='text' [(ngModel)] = "i.remarks" readonly/></td>
+                <td><input class="tableinput" name="{{i.invoiceDate}}" type='text' [value] = "i.invoiceDate" readonly/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="footer"></div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+<div class="head">
+    <button class="back" (click)="back()" *ngIf="showBack == true">Back</button>
+    <button class="logout" (click)="logout()" *ngIf="showLogout == true">Log Out</button>
+</div>
+
+<router-outlet></router-outlet>
+

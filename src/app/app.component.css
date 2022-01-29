@@ -1,0 +1,15 @@
+.head {
+    width: 100%;
+    background-color: rgb(47, 48, 56);
+    color: rgb(245, 244, 244);
+    font-size: 30px;    
+    padding: 0 20px;
+    height: 100px;
+    line-height: 100px;
+    box-sizing: border-box;
+}
+
+.title {
+    display: block;
+    text-align: center;
+}

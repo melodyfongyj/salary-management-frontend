@@ -1,0 +1,19 @@
+<div class="login-container">
+    <p>
+        <label class="login">Email: </label><input type='text' [(ngModel)] = "username"/>
+    </p>
+    
+    <p>
+        <label class="login">Password: </label><input type="password" [(ngModel)] = "password"/>
+    </p>
+
+    <p>
+        <a class="link" routerLink="/change-password" routerLinkActive="active">Change Password</a>
+    </p>
+
+    <p>
+        <button (click)="login()">Login</button>
+    </p>
+    <p class="notif">{{ message }}</p>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,108 @@
+
+.add-container{
+    background-color: white;
+    height: fit-content;
+    border: 1px solid #000;
+    width: 50vw;
+    margin: auto auto auto auto;
+    padding: 40px;
+    border-radius: 4px;   
+}
+.add-btn{
+    background-color: whitesmoke;
+    border: 1px solid rgb(191, 191, 192) !important;
+    color: rgb(82, 81, 81);
+    margin-bottom: 0;
+}
+.bank-notif{
+    color: red;
+    font-style: italic;
+    font-size: 12px;
+    margin-left: 2em;
+    vertical-align: middle;
+}
+.gap{
+    width: 40px !important;
+}
+.header, .footer{
+    min-height: 3em;
+}
+.required-field::after {
+    content: "*";
+    color: red;
+}
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tableinput-td{
+    width: 120px;
+}
+.tableinput-td select{
+    width: 100% !important;
+    text-align: left;
+}
+.tableinput{
+    border: none;
+    width: 100px;
+    display: block;
+    margin: 0 0 0 0;
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0em 0em 0.5em 0em;
+    text-align: left;
+}
+.thtd-id{
+    width: 3em;
+    text-align: center;
+}
+
+button{
+    background-color: rgb(50, 50, 102);
+    color: #fff;
+    border: 1px solid rgb(30, 30, 71);
+    padding: 10px 30px;
+    margin: 2em 0em 2em 0em;
+    border-radius: 5px;
+    min-width: 150px;
+}
+img{
+    height: 25px;
+    width: 25px;
+}
+input, select{
+    border: 1px solid rgb(142, 142, 143);
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin: 0 0 0 0;
+    outline: none;
+    width: 10em;
+}
+label {
+    text-align: left;
+    display: inline-block;
+    width: 120px;
+    padding: 5px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    border: 0.5px solid rgb(191, 191, 192);
+    width: auto;
+    height: 1em;
+}
+th{
+    margin: auto auto auto auto;
+}
+#title-sal{
+    margin-bottom: 1em;
+}
+
+#workdate{
+    margin-left: 1.8em;
+}

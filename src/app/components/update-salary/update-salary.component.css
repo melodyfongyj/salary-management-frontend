@@ -1,0 +1,93 @@
+.add-container{
+    background-color: white;
+    height: fit-content;
+    border: 1px solid #000;
+    width: 50vw;
+    margin: auto auto auto auto;
+    padding: 40px;
+    border-radius: 4px;   
+    overflow-x: auto;
+}
+.filter-date{
+    float: left;
+}
+.filter-date select {
+    margin-left: 1em;
+}
+.gap{
+    clear: both;
+}
+.header, .footer{
+    min-height: 3em;
+}
+.label-gap{
+    width: 40px !important;
+}
+.select-month, .select-year{
+    height: 30px;
+    width: 80px !important;
+    margin: 2em 0em 0 0em;
+    vertical-align: middle;
+}
+.submit-date{
+    padding: 5px 5px;
+    margin: 2em 0em 0 0em;
+    background-color: whitesmoke;
+    color: rgb(50, 50, 102);
+    width: fit-content;
+    vertical-align: middle;
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0em 0em 0.5em 0em;
+    text-align: left;
+}
+.updateSalary{
+    float: right;
+}
+button{
+    background-color: rgb(50, 50, 102);
+    color: #fff;
+    border: 1px solid rgb(30, 30, 71);
+    padding: 10px 30px;
+    margin: 2em 0em 3em 0em;
+    border-radius: 5px;
+    width: 100px;
+}
+input, select{
+    border: 1px solid rgb(142, 142, 143);
+    border-radius: 2px;
+    padding: 5px 10px;
+    outline: none;
+    width: 10em;
+    vertical-align: middle;
+}
+select{
+    height: 30px;
+    width: 150px;
+    margin: 2em 0em 0 0em;
+}
+label {
+    text-align: left;
+    display: inline-block;
+    width: 120px;
+    padding: 5px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    border: 0.5px solid rgb(191, 191, 192);
+    width: auto;
+    height: 1em;
+}
+th{
+    margin: auto auto auto auto;
+}
+
+
+.buttons button{
+    margin-left: 2em;
+}

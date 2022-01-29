@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let AppConstants = /*#__PURE__*/(() => {\n  class AppConstants {}\n\n  AppConstants.APIBaseURL = \"http://localhost:80/api/Employees/\";\n  AppConstants.APIAdminURL = \"http://localhost:80/api/Admin/\";\n  return AppConstants;\n})();","map":null,"metadata":{},"sourceType":"module"}

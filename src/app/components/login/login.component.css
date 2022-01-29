@@ -1,0 +1,44 @@
+.link {
+    display: inline-block;
+    margin: 5px 252px 0px 0px;
+}
+
+.login-container{
+    background-color: white;
+    border: 1px solid #000;
+    height: fit-content;
+    width: 500px;
+    margin: 50px auto auto auto;
+    padding: 40px;
+    border-radius: 4px;
+    text-align: center;    
+}
+
+.notif {
+    color: red;
+    font-style: italic;
+    font-size: 16px;
+}
+
+button{
+    background-color: rgb(50, 50, 102);
+    color: #fff;
+    border: 1px solid rgb(30, 30, 71);
+    padding: 10px 30px;
+    margin: 60px 0 0 0;
+    border-radius: 5px;
+}
+
+input{
+    border: 1px solid rgb(30, 30, 71);
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+label {
+    text-align: left;
+    display: inline-block;
+    min-width: 150px;
+    padding: 5px;
+    margin-right:40px;
+}

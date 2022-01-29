@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<div class="header"></div>
+<div class="add-container">
+    <p class="title" id="title-sal">Salary Details</p>
+    <hr/>
+    <div class="buttons">
+        <div class="filter-date">
+            <select class="select-month" [(ngModel)]="selectedMonth">
+                <option *ngFor="let i of allmonths" [ngValue]="i">{{ i.name }}</option>
+            </select>
+            <select class="select-year" [(ngModel)]="selectedYear">
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+            <!-- (ngModelChange)="getSalary()" -->
+            <select [(ngModel)]="selectedEmp" >
+                <option *ngFor="let i of mapName" [value]="i">{{ i }}</option>
+            </select>
+            <button class="submit-date" (click)="getSalary()">Get Record</button>
+        </div>
+        <div class="updateSalary">
+            <button type="button" (click)="updateSalary()">Submit</button>
+        </div>
+    </div>
+    <div class="gap"></div>
+    <p class="salary">
+        <label class="add">Emp Id: </label><input class="text" type='text' [(ngModel)] = "selectedData[0].employeeId" disabled/>
+        <label class="label-gap"></label>
+        <label class="add">Name: </label><input class="text" type="text" [(ngModel)] = "selectedData[0].name" disabled/>
+    </p>
+    <p class="salary">
+        <label class="add">Basic Salary: </label><input class="date" type='text' [(ngModel)] = "selectedData[0].basicSalary"/>
+        <label class="label-gap"></label>
+        <label class="add">Bonus: </label><input class="date" type="text" [(ngModel)] = "selectedData[0].bonus" />
+    </p>
+    <p class="salary">
+        <label class="add">Deduction: </label><input class="date" type='text' [(ngModel)] = "selectedData[0].deduction"/>
+        <label class="label-gap"></label>
+        <label class="add">Remarks: </label><input class="date" type="text" [(ngModel)] = "selectedData[0].remarks"/>
+    </p>
+    <p class="salary">
+        <label class="add">Salary Amount: </label><input class="date" type='text' [(ngModel)] = "selectedData[0].salaryAmt" />
+    </p>
+</div>
+<div class="footer"></div>
+<router-outlet></router-outlet>

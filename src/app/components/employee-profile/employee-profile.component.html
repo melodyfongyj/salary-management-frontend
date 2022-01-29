@@ -1,0 +1,126 @@
+<app-nav-bar></app-nav-bar>
+<div class="header"></div>
+<div class="add-container">
+    <p class="title">Personal Details</p>
+    <hr/>
+    <p>
+        <label class="required-field">First Name: </label><input #myInput type='text' [(ngModel)] = "empDetails.firstName" [disabled]="!isReadonly ? false : true"/>
+        <label class="label-gap"></label>
+        <label class="required-field">Last Name: </label><input type="text" [(ngModel)] = "empDetails.lastName" [disabled]="!isReadonly ? false : true"/>
+    </p>
+
+    <p>
+        <label class="required-field">Email: </label><input type='text' [(ngModel)] = "empDetails.email" [disabled]="!isReadonly ? false : true"/>
+        <label class="label-gap"></label>
+        <label>Mobile: </label><input type="text" [(ngModel)] = "empDetails.mobileNo"/>
+    </p>
+    <p>
+        <label>Date of Birth: </label><input type='date' [(ngModel)] = "empDetails.dateOfBirth"/>
+        <label class="label-gap"></label>
+        <label>Age: </label><input type="text" [(ngModel)] = "empDetails.age"/>
+    </p>
+    <p>
+        <label>Address: </label><input type='text' [(ngModel)] = "empDetails.address"/>
+        <label class="label-gap"></label>
+        <label>Personal ID: </label><input type="text" [(ngModel)] = "empDetails.personalID"/>
+    </p>
+</div>
+
+<div class="header"></div>
+<div class="add-container">
+    <p class="title">Work Details</p>
+    <hr/>
+    <p>
+        <label>Employee ID: </label><input type='text' [value] = "empDetails.employeeId" disabled/>
+        <label class="label-gap"></label>
+        <label>Access Level: </label>
+            <select [(ngModel)] = "empDetails.accessLevel" [disabled]="!isReadonly ? false : true">
+                <option value=1>Default</option>
+                <option value=2>Admin</option>
+                <option value=0>None</option>
+            </select>
+    </p>
+    <p>
+        <label>Job Title: </label><input type='text' [(ngModel)] = "empDetails.jobTitle" [disabled]="!isReadonly ? false : true"/>
+        <label class="label-gap"></label>
+        <label>Department: </label><input type="text" [(ngModel)] = "empDetails.departmentName" [disabled]="!isReadonly ? false : true"/>
+    </p>
+    <p>
+        <label>Start Date: </label><input class="date" type='date' [(ngModel)] = "empDetails.startDate" [disabled]="!isReadonly ? false : true"/>
+        <label class="label-gap"></label>
+        <label>End Date: </label><input class="date" type="date" [(ngModel)] = "empDetails.endDate" [disabled]="!isReadonly ? false : true"/>
+    </p>
+</div>
+<div class="header"></div>
+<div class="add-container">
+    <p class="title" id="title-sal">Bank Details <span class="bank-notif">There must be only 1 Default Account.</span></p>
+    <table class="BankList">
+        <th hidden>Detail Id</th>
+        <th>Bank Name</th>
+        <th>Branch Code</th>
+        <th>Account No</th>
+        <th>Account Status</th>
+        <th class="thtd-id">Del</th>
+        <tbody>
+            <tr *ngFor="let row of empDetails.bankDetail; let i = index;">
+                <td hidden><input class="tableinput" name="{{row.bankDetailId}}" type='text' [(ngModel)] = "row.bankDetailId" disabled/></td>
+                <td><input class="tableinput" name="{{row.bankName}}" type='text' [(ngModel)] = "row.bankName"/></td>
+                <td><input class="tableinput" name="{{row.branchCode}}" type='text' [(ngModel)] = "row.branchCode"/></td>
+                <td><input class="tableinput" name="{{row.accountNo}}" type='text' [(ngModel)] = "row.accountNo"/></td>
+                <td class="tableinput-td"><select class="tableinput" [(ngModel)] = "row.accountStatus">
+                        <option value = 0>Default</option>
+                        <option value = 1>Secondary</option>
+                    </select>
+                </td>
+                <td class="thtd-id"><img src="https://i.imgur.com/8roOUfE.png" title="Freepik" (click)="delete(i)"/></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="add-btn" (click)="addRow()">Add Bank Detail</button>
+</div>
+
+<div class="header"></div>
+<div class="add-container">
+    <p class="title" id="title-sal">Salary Details</p>
+    <select class="select-month" [(ngModel)]="selectedMonth">
+        <option *ngFor="let i of allmonths" [ngValue]="i">{{ i.name }}</option>
+    </select>
+    <select class="select-year" [(ngModel)]="selectedYear">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+    <button class="submit-date" (click)="getSalary()">Get Record</button>
+    <label class="norecord"> {{ norecord }} </label>
+    <table class="sal-list">
+        <th>Invoice Date</th>
+        <th>Basic</th>
+        <th>Bonus</th>
+        <th>Deduction</th>
+        <th hidden>EmpId</th>
+        <th hidden>Month</th>
+        <th>Remarks</th>
+        <th>Salary Amount</th>
+        <th hidden>SalId</th>
+        <th hidden>Year</th>
+        <tbody>
+            <tr >
+                <!-- [readonly]="!isReadonly ? false : true" -->
+                <td>{{selectedSal[0].invoiceDate | date: 'dd/MM/yyyy'}}</td>
+                <td>{{selectedSal[0].basicSalary}}</td>
+                <td>{{selectedSal[0].bonus}}</td>
+                <td>{{selectedSal[0].deduction}}</td>
+                <td hidden>{{selectedSal[0].employeeId}}</td>
+                <td hidden>{{selectedSal[0].month}}</td>
+                <td>{{selectedSal[0].remarks}}</td>
+                <td>{{selectedSal[0].salaryAmt}}</td>
+                <td hidden>{{selectedSal[0].salaryId}}</td>
+                <td hidden>{{selectedSal[0].year}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="submit-btn" >
+    <button type="submit" (click)="submit()">Save</button>
+</div>
+<div class="footer"></div>
+<router-outlet></router-outlet>
