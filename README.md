@@ -14,7 +14,7 @@ Run `npm install` to install node modules.
 
 Option 1: Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Option 2: If hosting on IIS, set physical path to: `..dist/salary-management`. Run `npm run build` if you change any code, then restart the website in IIS.
+Option 2: If hosting on IIS, set physical path to: `..dist/salary-management` and set port number to 91. Run `npm run build` if you change any code, then restart the website in IIS.
 
 
 ## Further help
