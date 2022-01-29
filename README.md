@@ -1,8 +1,10 @@
 # SalaryManagement
+This project was developed to test my .NET and Angular knowledge. Salary Management system consists of 2 applications.
+Back-end: salary-management (.NET Core)
+Front-end: salary-management-frontend (Angular)
 
-salary-management-frontend consists of the front-end application for the Salary Management system. The back-end application exists in salary-management.
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Project Description: Employees will be able to log in and view their personal, work, bank and salary information. Employees are able to update their personal and bank details.
+There will also be an administrator who will be in charge of creating employee accounts, updating salaries as well as modifying other information.
 
 
 ## Step 1) Install missing dependencies
