@@ -21,6 +21,7 @@ Option 1: Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 Option 2: If hosting on IIS, set physical path to: `..dist/salary-management` and set port number to 91. Run `npm run build` if you change any code, then restart the website in IIS.
 
 
-## Further help
+## Video demo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://user-images.githubusercontent.com/93577252/151669009-c99f95b8-e210-4974-9870-676264a3d46f.mp4
+
